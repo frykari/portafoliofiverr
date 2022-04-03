@@ -1,0 +1,145 @@
+
+/*en esta sección se incluiran todas los estilos unitarios,
+   es decir los stylos puntuales que solo realisan una acción*/
+
+
+.position_abs_f{
+    position: absolute;
+}
+.position_rel_f {
+    position: relative;
+}
+
+.inline-block_f{
+    display: inline-block;
+}
+.block_f{
+    display: block;
+}
+.flex_f{
+    display: flex;
+}
+.flex_column{
+    flex-direction: column;
+}
+.rotar_n90_f {
+    transform: rotate(-90deg);
+}
+.direction_column_f{
+    flex-direction: column;
+}
+.just_cont_center_f{
+    justify-content: center;
+}
+.alig_item_center_f{
+    align-items: center;
+}
+
+.anim_line_f:hover{
+    border-bottom:solid 1px #FFEA00;
+}
+.transf_r_90_f{
+    transform: rotate(90deg);
+}
+.centrar_margin_f{
+    display: block;
+    margin: 0 auto;
+}
+.text_center_f{
+    text-align: center;
+}
+
+.size_18_f{
+    font-size: 18px;
+}
+.seze_16_f{
+    font-size: 16px;
+}
+.size_24_f{
+    font-size: 24px;
+}
+.size_12_f{
+    font-size: 12px;
+}
+@media screen and (min-width:320px) and (max-width:320px){
+    .size_16_f{
+	font-size: 14px;
+    }
+    .size_18_f{
+	font-size: 16px;
+    }
+    .size_24_f{
+	font-size: 20px;
+    }
+}
+.wh_24_f {
+    height: 24px;
+    width: 24px;
+}
+/******************** width_f ************************/
+.width_32_f{
+    width: 32px;
+}
+
+/******************** fin de width_f ************************/
+
+
+/******************** height_f ************************/
+.height_60{
+    height: 60px;
+}
+/******************** fin de height_f ************************/
+.marg_t24_f{
+    margin-top: 24px;
+}
+.marg_b24_f {
+    margin-bottom: 24px;
+}
+.marg_l20_f {
+    margin-left: 20px;
+}
+.marg_v24_f{
+    margin-bottom: 24px;
+    margin-top: 24px;
+}
+.marg_h8_f {
+    margin: 0 8px;
+}
+.marg_h16_f {
+    margin: 0 16px;
+}
+.padd_h4_f {
+    padding: 0 4px;
+}
+.padd_b8_f{
+    padding-bottom: 8px;
+}
+.padd_b18_f {
+    padding-bottom: 18px;
+}
+.padd_t16_f {
+    padding-top: 16px;
+}
+.padd_t32_f {
+    padding-top: 32px;
+}
+.padd_t20_f{
+    padding-top: 20px;
+}
+.padd_t24_f {
+    padding-top: 24px;
+}
+
+/************************** class dinamicas ************************************/
+.block{
+    display: block;
+}
+.none{
+    display: none;
+}
+/*no borrar ninguna class*/
+.display_none {
+    display: none;
+}
+/************************** fin de las class dinamicas ************************************/
+

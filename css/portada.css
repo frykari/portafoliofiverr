@@ -1,0 +1,350 @@
+/*NOTA centrar el auxliar  32 px right para que no se rompa*/
+/*Plug 'joshdick/onedark.vim' 		"tema" linea 6*/
+
+/*colorscheme onedark 			"activar el tema onedark linea 35*/
+
+/*css personalizado*/
+/*A para distinguin de las etiquetas de undersgrounds todos las class creadas personalisado se les pone el prefijo _f para distinguin de las etiquetas de undersgrounds*/
+
+:root{
+    --cprimary:#e9e7ea;
+    --csecond:#FFEA00;
+    --cthird:#3ED8FF;
+    --cwhite:#fff;
+    --cblack:#000;
+}
+
+/* devido a los formatos de fonts es mejor consumir la api google fonts que descargarlo y usar @font-face*/
+
+
+html {
+    box-sizing: border-box;
+    color: #64697A;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Manrope';
+    height: 100%; /*esto hace que aparesca el scroll, pero se espera que para el cliente no aparesca ya que el menu de edicion desaparecera*/
+    /*scroll-behavior: smooth;*/ /*es la forma css de hacer suabe al scroll horizontal*/
+    overflow-x: hidden;
+}
+
+body{
+    background-color: var(--cprimary);
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Manrope';
+    margin: 0;
+    width: 100vw;
+}
+/* fondo de lineas poniendole la class grid al body */
+.grid {
+    display: block;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-image: repeating-linear-gradient(90deg,rgb(223, 223, 223, 1), rgb(223, 223, 223, 1) 2px, transparent 0px,transparent 10%);
+    background-size: auto;
+    background-origin: padding-box;
+    background-clip: border-box;
+}
+/* fondo de lineas */
+
+*,*::after,*::before {
+    box-sizing: inherit;
+}
+p {
+    margin: 0;
+}
+
+/* SOBREESCRIBIR EL CODIGO DE UNDERSCORES */
+
+
+/* links del footer a*/
+.site-info a{
+    text-decoration: none;
+    color: #3ED8FF;
+}
+/* Termino links del footer a*/
+
+/*********************todas las cass de underscores*/
+/*********************End class de underscores*/
+
+
+/* TERMINANDO DE SOBREESCRIBIR EL CODIGO DE UNDERSCORES */
+
+/* class puntuales para una sola acción */
+@media screen and (max-width:1200px){
+    .none_1000_f{
+	display:none;
+    }
+}
+.fondo_primary{
+    background-color: var(--cprimary);
+}
+.fondo_second{
+    background-color: var(--csecond);
+}
+
+/* Aca termina class puntuales*/
+
+/* cosas particulares*/
+.no_selec {
+    h-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+}
+.filter_blur_f{
+   -webkit-backdrop-filter:blur(8px);
+    backdrop-filter:blur(8px);
+}
+/* fin de cosas particulares*/
+
+/* desde aca enpiesa toda estructura en orden*/
+
+.text_deco_none_f{
+    text-decoration: none;
+}
+.site_f{
+    display:flex;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.site-info {
+    font-size: 10px;
+    text-align: center;
+}
+.header_f{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding-top: 32px;
+}
+.logo_f {
+    width: calc(100vw - 460px);
+    height: 66px;
+    display:flex;
+}
+.logo_mini {
+    display: none;
+}
+
+
+/****portada****/
+.portada{
+    display: flex;
+    min-width: 100vw;
+    justify-content: center;
+}
+/**** fin de la portada****/
+
+
+/*para la pagina principal */
+.mensaje {
+    width: 86%;
+}
+.main_f{
+    display: flex;
+    width: calc(100vw - 460px);
+    min-width: 620px;
+    padding-top: 24px;
+}
+
+.img_rotar_f{
+    animation: rotar_f 5s infinite lineaer;
+}
+@keyframes rotar_f{
+    from{
+	transform: rotate(0);
+    }
+    to{
+	transform: rotate(360deg);
+    }
+}
+
+.frase_primary_f{
+    color: #fff;
+    font-family: 'Manrope';
+    font-weight: 700;
+    font-size: 48px;
+}
+
+.frase_second_f{
+    font-size: 20px;
+}
+
+.cita_f{
+    background-color: #fff;
+    border-radius: 3px;
+    color: #000;
+    font-family: Concert One;
+    font-size: 20px;
+    font-weight:600;
+    height: 30px;
+    width: auto;
+}
+
+.tag_f{
+    border-radius: 6px;
+    border-color: --csecond;
+    color: #fff;
+    background-color: none;
+}
+
+.acion_f{
+    color:--csecond;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 700;
+}
+/*Acabo la pagina principal*/
+
+
+
+/*links<a>*/
+.site-main {
+    margin: 0;
+}
+.page {
+    margin: 0;
+}
+div .button_f {
+	color: #fff;
+}
+
+div .button_f:visited {
+	color: #4169e1;
+}
+
+div .button_f:focus,
+div .button_f:active {
+	color: #020B15;
+	background-color: #3ED8FF;
+}
+
+div .button_f:focus {
+	outline: thin dotted;
+}
+
+div .button_f:hover, 
+div .button_f:active {
+	outline: 0;
+}
+/* Terminando links<a> */
+
+/* css main , css custimisado de los html insertados en gutengber */
+.oferta{
+	color:#64697A;
+	height: auto;
+	font-size:20px;
+	font-weight:500;
+	width:50%;
+}
+.oferta>strong {
+    position: relative;
+}
+.oferta>strong > span {
+    position: absolute;
+    right:0;
+    width:0;
+    background-color: #E9E7EA;
+    border-left: 1px solid #64697A;
+    animation: escribir 5s steps(30) infinite;
+}
+
+@keyframes escribir {
+    from { width: 100% }
+    to { width: 0 }
+}
+
+/* END css main , css custimisado de los html insertados en gutengber */
+.button_f{
+    padding: 0 12px;
+    height:28px;
+    border-radius:14px;
+    margin: 0 8px;
+}
+.button_f:hover{
+    cursor: none;
+}
+.insideMove {
+    width: 150px;
+    height: 150px;
+    /*border:2px solid #3ED8FF;*/
+    background-color: #CE4545;
+    border-radius: 50%;
+    position:absolute;
+    pointer-events: none;
+    z-index: -1;
+    transform:  scale(0);
+    transition: all 0.5s ease;
+}
+.scale12{
+    transform-origin: 0% 0%;
+    transform:  scale(2, 2) translate(-50% , -50%);
+}
+/* Todo los @media querys*/
+@media screen and (min-width:650px) and (max-width:1100px){
+    .mensaje{
+	width: 90%;
+    }
+    .oferta{
+	width: 80%;
+    }
+}
+@media screen and (max-width:650px){
+    .logo_f{
+	height: 34px;
+	justify-content: center;
+    }
+    .logo_max{
+	display: none;
+    }
+    .logo_mini{
+	display: block;
+    }
+    .mensaje{
+	font-size: 32px;
+	-webkit-text-stroke:1px #64697A;
+	width: 100%;
+    }
+    .oferta{
+	font-size: 16px;
+	word-wrap: break-word;
+	width:100%;
+    }
+    .experiencia{
+	font-size: 16px;
+	padding: 0 12px;
+    }
+    .main_f{
+	min-width: 100vw;
+    }
+    .main_content{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-right: 12px;
+	margin-left: 12px;
+    }
+    .box_etiqueta{
+	font-size: 12px;
+	margin: 8px 12px;
+	min-width: 250px;
+    }
+}
+/* fin de todo los @media querys*/
+
+/*************** END Customiser cursor ******************************/
+
+
+
+
+
+
+
+
+
+
+
+
